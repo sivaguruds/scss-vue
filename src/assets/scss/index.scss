@@ -1,0 +1,23 @@
+@import './globals/index.scss';
+@import './mixins/index.scss';
+@import './vars/index.scss';
+
+
+a {
+    color: #000000;
+    font-size: 35px;
+    @if($debug) {
+        border: 1px dotted $hover-color;
+    }
+    &:hover {
+        color: $hover-color;
+    }
+}
+
+
+
+@media (max-width: #{$breakpoint}) {
+    a{
+        font-size: 32px;
+    }
+}
